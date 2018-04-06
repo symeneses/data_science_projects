@@ -92,7 +92,7 @@ Source: [Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/wr
 
 ## Markdown
 
-* Designed <as a format for writing for the web> (John Gruber) 
+* Designed "as a format for writing for the web" (John Gruber) 
 * Very easy to use (This slides are a proof!)
 * Critics:
   - Many Flavors
@@ -100,7 +100,7 @@ Source: [Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/wr
 [Why You Shouldn’t Use "Markdown"](http://ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/)
 
 Solution:
-*[CommonMark](http://commonmark.org)
+[CommonMark](http://commonmark.org)
 
 ---
 
@@ -122,11 +122,11 @@ Not an extensive list, just some widely used!
 
 ### [Sphinx](http://www.sphinx-doc.org)
   - It uses reStructuredText
-  - Common libraries who used it: [scikit-learn](https://github.com/scikit-learn/scikit-learn), 
+  - Common library that uses it: [scikit-learn](https://github.com/scikit-learn/scikit-learn)
 
 ### [MKdocs](http://www.mkdocs.org/) 
   - It uses Markdown
-  - Common libraries who used it: [keras](https://github.com/keras-team/keras), 
+  - Common library that uses it: [keras](https://github.com/keras-team/keras)
 
 ---
 
@@ -173,7 +173,7 @@ git config --global --list
 
 
 ```bash
-git init project_name           # Create a new project
+git init project_name			# Create a new project
 git remote add origin url_git	# Connect repo with remote 
 git remote remove origin		# Disconnect repo from remote 
 git remote -v					# Check if repository is connnected
@@ -186,7 +186,7 @@ git remote -v					# Check if repository is connnected
 
 ```bash
 git add									# Add files to the staging-area (index)
-git commit -m "describe your commit" 	# Commit the files added in the staging-area
+git commit -m "describe your commit"	# Commit the files added in the staging-area
 git commit -a							# Commit + add (from working directory to repo)
 ```
 Source: <https://git-scm.com/about/staging-area>
@@ -196,11 +196,11 @@ Source: <https://git-scm.com/about/staging-area>
 ## Check where we are
 
 ```bash
-git status			# Show changed files and files to be committed
-git log				# See history of changes
-git diff id_commit	# Difference betwenn id_commit and HEAD (last commit)
-git show id_commit	# See details about a commit
-git gitk			# Show a graphical representation of the history
+git status				# Show changed files and files to be committed
+git log					# See history of changes
+git diff id_commit		# Difference betwenn id_commit and HEAD (last commit)
+git show id_commit		# See details about a commit
+git gitk				# Show a graphical representation of the history
 ```
 
 ---
@@ -224,13 +224,13 @@ git commit -a --amend		# Amend previous commit
 ## Working with branches
 
 ```bash
-git branch					# See branches
-git branch branch_name		# Create a new branch
-git checkout -b branch_name	# Create a new branch and switch to it
-git checkout id_commit		# Go to the status of a commit
-git checkout branch_name    # Go to the last commit
-git branch --merged			# See branches merged with current
-git branch -D branch_name	# Remove branch
+git branch						# See branches
+git branch branch_name			# Create a new branch
+git checkout -b branch_name		# Create a new branch and switch to it
+git checkout id_commit			# Go to the status of a commit
+git checkout branch_name		# Go to the last commit
+git branch --merged				# See branches merged with current
+git branch -D branch_name		# Remove branch
 ```
 ---
 
@@ -257,11 +257,11 @@ git request-pull id_commit repo_dir master # Request to pull from id_commit in y
 ---
 ### Review changes
 
-If you get a pull rquest (ideally) you should see what it contains
+If you get a pull request (ideally) you should see what it contains
 
 ```bash
-git fetch cloned_repo_dir master	# Fetch changes from the cloned repo 
-git log -p HEAD..FETCH_HEAD			# Review changes that are in 'FETCH_HEAD'
+git fetch cloned_repo_dir master		# Fetch changes from the cloned repo
+git log -p HEAD..FETCH_HEAD				# Review changes that are in 'FETCH_HEAD'
 ```
 
 ---
@@ -284,8 +284,8 @@ git merge branch_name				# Merge the changes from the given branch into current 
 ## Useful tips
 
 ```bash
-git show :/query		# Show objects that match the query
-git grep -e pattern  	# Look for patterns in the current branch
+git show :/query			# Show objects that match the query
+git grep -e pattern			# Look for patterns in the current branch
 ```
 ---
 
