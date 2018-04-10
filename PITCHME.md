@@ -28,7 +28,7 @@
   - [Standard folders](https://github.com/kennethreitz/samplemod): docs, tests (if more than one file)
   - Folders for data science: data, output, models, source
   - Modules: (if more than one file) Including their Functions
-  - Packages: Any directory with **__init__.py**
+  - Packages: Any directory with ```__init__.py```
   
 ---
  
