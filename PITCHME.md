@@ -25,23 +25,13 @@
 
 ## Project structure
 
-  - Standard folders: docs, tests (if more than one file)
+  - [Standard folders](https://github.com/kennethreitz/samplemod): docs, tests (if more than one file)
   - Folders for data science: data, output, models, source
   - Modules: (if more than one file) Including their Functions
-
----
-
-## Some important (standard) files
-
-setup.py: Package and distribution management
-  - It should be in the folder of the source code
-requirements.txt: list of dependencies
-  - It helps to create virtual environments
-Makefile: generic tasks
-  - To use **make** Programming building utility
   
+  ? question library
 ---
-
+ 
 ## Cookiecuttier
 
 "A command-line utility that creates projects from cookiecutters (templates)"
@@ -57,7 +47,20 @@ cookiecutter https://github.com/drivendata/cookiecutter-data-science
 
 ---
 
-## References
+
+## Some important (standard) files
+
+  - setup.py: Package and distribution management. Example [here!](https://github.com/keras-team/keras/blob/master/setup.py)
+    - It should be in the folder of the source code
+  - requirements.txt: list of dependencies. Example [here!](https://github.com/openai/gym/blob/master/requirements.txt)
+    - It helps to create virtual environments
+  - Makefile: generic tasks. Example [here!](https://github.com/scikit-learn/scikit-learn/blob/master/Makefile)
+    - To use **make** Programming building utility
+ 
+---
+
+
+## Recommended readings: Project Structure
 
   - [The Hitchhiker’s Guide to Python!](http://docs.python-guide.org)
   - [Cookiecutter: Better Project Templates](https://cookiecutter.readthedocs.io)
@@ -65,28 +68,6 @@ cookiecutter https://github.com/drivendata/cookiecutter-data-science
 ---
 
 ## Documenting your projects
-
----
-
-## Basic files
-
-### Required
-
-README: At the root directory should give general information 
-  - Purpose of the project
-  - URL of the main source
-  - How to install
-
-LICENSE: specify the license under which the software is made available to the public.
-
-### Optional 
-
-They can be sections in README
-
-TODO: list the planned development
-CHANGELOG: changes in the code base for the latest versions
-
-Source: [Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/writing/documentation/)
 
 ---
 
@@ -109,6 +90,8 @@ Solution:
 * Designed for documentation
 * Has semantic and roles
 
+example
+
 [Quick reStructuredText user reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
 
 * Comparison
@@ -130,11 +113,34 @@ Not an extensive list, just some widely used!
 
 ---
 
+## Basic files
+
+### Required
+
+README: At the root directory should give general information 
+  - Purpose of the project
+  - URL of the main source
+  - How to install
+
+LICENSE: specify the license under which the software is made available to the public.
+---
+## Basic files
+
+### Optional 
+
+They can be sections in README
+
+TODO: list the planned development
+CHANGELOG: changes in the code base for the latest versions
+
+Source: [Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/writing/documentation/)
+---
 # Git for Data Scientist
 
 ---
 # Version Control System
 
+Why? 
   - To work in teams smoothly
   - To keep track of history
   - DS is (sometimes) a trial & error process 
@@ -154,6 +160,7 @@ Not an extensive list, just some widely used!
 ## Installing
 
 For Ubuntu, just like that!
+
 ```bash
 apt-get install git
 ```
@@ -236,7 +243,7 @@ git branch -D branch_name		# Remove branch
 
 ## Collaboration
 
-1. Clone/Fork > Pull request > 2. Review changes > 3. Pull or Merge
+1. Clone/Fork > 2. Pull request > 3. Review changes > 4. Pull or Merge
 
 ---
 ### Cloning/Forking
@@ -290,7 +297,7 @@ git grep -e pattern			# Look for patterns in the current branch
 ---
 
 
-## Recommended readings
+## Recommended readings: GIT
 
 - [Pro Git book, written by Scott Chacon and Ben Straub ](https://git-scm.com/book/en/v2)
 - [To manage big files](http://git-annex.branchable.com/)
@@ -299,6 +306,38 @@ git grep -e pattern			# Look for patterns in the current branch
 
 # Other helpful tools
 
+
+---
+## Environments
+
+### Shell
+
+```bash
+virtualenv -p $(which python3) env_name
+source env_name/bin/activate
+pip install -r requirements.txt
+```
+
+### Anaconda
+
+```bash
+conda create --name env_name python=python_version
+conda activate env_name
+pip install -r requirements.txt
+```
+---
+
+## Docker Containers
+
+### [repo2docker](https://github.com/jupyter/repo2docker)
+
+Creates docker containers from your repo base on a [configuration file](http://repo2docker.readthedocs.io/en/latest/usage.html). 
+
+```bash
+pip install jupyter-repo2docker
+jupyter-repo2docker https://github.com/your_account/your_repo
+
+```
 ---
 
 ## Slides
@@ -320,9 +359,7 @@ jupyter serverextension enable nbpresent --sys-prefix
 ```
 
 2. Edit cell types (skip, slide, sub-slide) and select a theme
-
 ---
-
 ## Dashboards
 
 ### [Jupyter dashboards](https://github.com/jupyter/dashboards)
@@ -334,15 +371,4 @@ pip install jupyter_dashboards
 jupyter dashboards quick-setup --sys-prefix
 ```
 
----
 
-## Docker Containers
-
-### [repo2docker](https://github.com/jupyter/repo2docker)
-
-Creates docker containers from your repo base on a [configuration file](http://repo2docker.readthedocs.io/en/latest/usage.html). 
-
-```bash
-pip install jupyter-repo2docker
-jupyter-repo2docker https://github.com/your_account/your_repo
-```
