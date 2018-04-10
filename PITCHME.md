@@ -132,7 +132,7 @@ Source: [Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/wr
 
 # Git for Data Scientist
 
-[!dont-do-this](https://i.pinimg.com/originals/4b/a3/9e/4ba39e05f2cfdca91057e9b6650e4733.jpg)
+![dont-do-this](https://i.pinimg.com/originals/4b/a3/9e/4ba39e05f2cfdca91057e9b6650e4733.jpg)
 
 ---
 ### Version Control System (VCS)
@@ -244,23 +244,25 @@ git branch -D branch_name		# Remove branch
 1. Clone/Fork > 2. Pull request > 3. Review changes > 4. Pull or Merge
 
 ---
-### Cloning/Forking
+## Cloning/Forking
 
 - Fork in hosting server then clone
 
 ```bash
-git clone repo_dir			# Create a new repo with a clone of repo in repo_dir (url or folder)
+git clone repo_dir			
+# Create a new repo with a clone of repo in repo_dir (url or folder)
 ```
 Work and when you have something valuable request to pull your changes
 
 ---
-### Pull request
+## Pull request
 
 ```bash
-git request-pull id_commit repo_dir master # Request to pull from id_commit in your master to the original repo
+git request-pull id_commit repo_dir master 
+# Request to pull from id_commit in your master to the original repo
 ```
 ---
-### Review changes
+## Review changes
 
 If you get a pull request (ideally) you should see what it contains
 
@@ -271,7 +273,7 @@ git log -p HEAD..FETCH_HEAD				# Review changes that are in 'FETCH_HEAD'
 
 ---
 
-### Pull or Merge
+## Pull or Merge
 
 For forks or branches
 
@@ -351,7 +353,7 @@ jupyter-repo2docker https://github.com/your_account/your_repo
 
 ### [nbpresent](https://github.com/Anaconda-Platform/nbpresent): In Jupyter notebooks
 
-1. Install and activate
+- 1. Install and activate
 
 ```bash
 pip install nbpresent
@@ -360,7 +362,7 @@ jupyter nbextension enable nbpresent --sys-prefix
 jupyter serverextension enable nbpresent --sys-prefix
 ```
 
-2. Edit cell types (skip, slide, sub-slide) and select a theme
+- 2. Edit cell types (skip, slide, sub-slide) and select a theme
 ---
 ## Dashboards
 
