@@ -28,8 +28,8 @@
   - [Standard folders](https://github.com/kennethreitz/samplemod): docs, tests (if more than one file)
   - Folders for data science: data, output, models, source
   - Modules: (if more than one file) Including their Functions
+  - Packages: Any directory with **__init__.py**
   
-  ? question library
 ---
  
 ## Cookiecuttier
@@ -51,11 +51,11 @@ cookiecutter https://github.com/drivendata/cookiecutter-data-science
 ## Some important (standard) files
 
   - setup.py: Package and distribution management. Example [here!](https://github.com/keras-team/keras/blob/master/setup.py)
-    - It should be in the folder of the source code
+    + It should be in the folder of the source code
   - requirements.txt: list of dependencies. Example [here!](https://github.com/openai/gym/blob/master/requirements.txt)
-    - It helps to create virtual environments
+    + It helps to create virtual environments
   - Makefile: generic tasks. Example [here!](https://github.com/scikit-learn/scikit-learn/blob/master/Makefile)
-    - To use **make** Programming building utility
+    + To use **make** Programming building utility
  
 ---
 
