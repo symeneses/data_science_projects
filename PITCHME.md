@@ -48,13 +48,13 @@ cookiecutter https://github.com/drivendata/cookiecutter-data-science
 ---
 
 
-## Some important (standard) files
+### Some important (standard) files
 
-  - setup.py: Package and distribution management. Example [here!](https://github.com/keras-team/keras/blob/master/setup.py)
-    + It should be in the folder of the source code
-  - requirements.txt: list of dependencies. Example [here!](https://github.com/openai/gym/blob/master/requirements.txt)
+  ##### setup.py: Package and distribution management. Example [here!](https://github.com/keras-team/keras/blob/master/setup.py)
+    - It should be in the folder of the source code
+  ##### requirements.txt: list of dependencies. Example [here!](https://github.com/openai/gym/blob/master/requirements.txt)
     + It helps to create virtual environments
-  - Makefile: generic tasks. Example [here!](https://github.com/scikit-learn/scikit-learn/blob/master/Makefile)
+  ##### Makefile: generic tasks. Example [here!](https://github.com/scikit-learn/scikit-learn/blob/master/Makefile)
     + To use **make** Programming building utility
  
 ---
