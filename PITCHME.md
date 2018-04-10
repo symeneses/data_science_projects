@@ -130,7 +130,7 @@ They can be sections in README
 Source: [Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/writing/documentation/)
 ---
 
-# Git for Data Scientist
+### Git for Data Scientist
 
 ![dont-do-this](https://i.pinimg.com/originals/4b/a3/9e/4ba39e05f2cfdca91057e9b6650e4733.jpg)
 
