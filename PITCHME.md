@@ -353,7 +353,7 @@ jupyter-repo2docker https://github.com/your_account/your_repo
 
 ### [nbpresent](https://github.com/Anaconda-Platform/nbpresent): In Jupyter notebooks
 
-- 1. Install and activate
+- Install and activate
 
 ```bash
 pip install nbpresent
@@ -362,7 +362,7 @@ jupyter nbextension enable nbpresent --sys-prefix
 jupyter serverextension enable nbpresent --sys-prefix
 ```
 
-- 2. Edit cell types (skip, slide, sub-slide) and select a theme
+- Edit cell types (skip, slide, sub-slide) and select a theme
 ---
 ## Dashboards
 
