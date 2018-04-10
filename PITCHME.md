@@ -50,14 +50,11 @@ cookiecutter https://github.com/drivendata/cookiecutter-data-science
 
 ### Some important (standard) files
 
-- **setup.py**: Package and distribution management. Example [here!](https://github.com/keras-team/keras/blob/master/setup.py)
-It should be in the folder of the source code
+- **setup.py**: Package and distribution management. It should be in the folder of the source code. Example [here!](https://github.com/keras-team/keras/blob/master/setup.py)
 
-- **requirements.txt**: list of dependencies. Example [here!](https://github.com/openai/gym/blob/master/requirements.txt)
-It helps to create virtual environments
+- **requirements.txt**: list of dependencies. It helps to create virtual environments. Example [here!](https://github.com/openai/gym/blob/master/requirements.txt)
 
-- **Makefile**: generic tasks. Example [here!](https://github.com/scikit-learn/scikit-learn/blob/master/Makefile)
-To use **make** Programming building utility
+- **Makefile**: generic tasks to use **make** Programming building utility. Example [here!](https://github.com/scikit-learn/scikit-learn/blob/master/Makefile)
  
 ---
 
@@ -80,69 +77,67 @@ To use **make** Programming building utility
 * Critics:
   - Many Flavors
   - Lack of semantic
-[Why You Shouldn’t Use "Markdown"](http://ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/)
-
-Solution:
-[CommonMark](http://commonmark.org)
+  - For details: [Why You Shouldn’t Use "Markdown"](http://ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/)
+* Solution:
+  - [CommonMark](http://commonmark.org)
 
 ---
 
 ## reStructuredText
 
 * Designed for documentation
-* Has semantic and roles
+* Has semantic and roles. For details see [here](http://ericholscher.com/blog/2016/oct/6/authoring-documentation-with-semantic-meaning/#semantic-meaning).
+* [Quick reStructuredText user reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
 
-example
-
-[Quick reStructuredText user reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
-
-* Comparison
-[RST vs. MD](http://www.zverovich.net/2016/06/16/rst-vs-markdown.html)
+* Comparison [RST vs. MD](http://www.zverovich.net/2016/06/16/rst-vs-markdown.html)
 
 ---
 
-## Libraries for documentation
+### Libraries for documentation
 
 Not an extensive list, just some widely used!
 
-### [Sphinx](http://www.sphinx-doc.org)
+#### [Sphinx](http://www.sphinx-doc.org)
   - It uses reStructuredText
   - Common library that uses it: [scikit-learn](https://github.com/scikit-learn/scikit-learn)
 
-### [MKdocs](http://www.mkdocs.org/) 
+#### [MKdocs](http://www.mkdocs.org/) 
   - It uses Markdown
   - Common library that uses it: [keras](https://github.com/keras-team/keras)
 
 ---
 
-## Basic files
+### Basic files
 
-### Required
+#### Required
 
-README: At the root directory should give general information 
+* README: At the root directory should give general information 
   - Purpose of the project
   - URL of the main source
   - How to install
 
-LICENSE: specify the license under which the software is made available to the public.
+* LICENSE: specify the license under which the software is made available to the public.
 ---
-## Basic files
+### Basic files
 
-### Optional 
+#### Optional 
 
 They can be sections in README
 
-TODO: list the planned development
-CHANGELOG: changes in the code base for the latest versions
+* TODO: list the planned development
+* CHANGELOG: changes in the code base for the latest versions
 
 Source: [Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/writing/documentation/)
 ---
+
 # Git for Data Scientist
 
----
-# Version Control System
+[!dont-do-this](https://i.pinimg.com/originals/4b/a3/9e/4ba39e05f2cfdca91057e9b6650e4733.jpg)
 
-Why? 
+---
+### Version Control System (VCS)
+
+* Why? 
   - To work in teams smoothly
   - To keep track of history
   - DS is (sometimes) a trial & error process 
@@ -150,6 +145,7 @@ Why?
 ---
 
 ## Hosting services
+
 
 |           | Private repositories |                  Size limits                 |                      Key advantages                     |
 |-----------|----------------------|:--------------------------------------------:|:-------------------------------------------------------:|
@@ -161,7 +157,7 @@ Why?
 
 ## Installing
 
-For Ubuntu, just like that!
+* For Ubuntu, just like that!
 
 ```bash
 apt-get install git
@@ -169,7 +165,7 @@ apt-get install git
 
 Or download [here!](https://git-scm.com/downloads)
 
-First steps
+* First steps
 
 ```bash
 git config user.name
@@ -179,7 +175,6 @@ git config --global --list
 ---
 
 ## New repos
-
 
 ```bash
 git init project_name			# Create a new project
@@ -202,6 +197,14 @@ Source: <https://git-scm.com/about/staging-area>
 
 ---
 
+## Pull/Push
+
+```bash
+git push origin master	# Update changes in remove
+git pull origin master	# Fetch and integrate from another repo or branch
+```
+---
+
 ## Check where we are
 
 ```bash
@@ -210,15 +213,6 @@ git log					# See history of changes
 git diff id_commit		# Difference betwenn id_commit and HEAD (last commit)
 git show id_commit		# See details about a commit
 git gitk				# Show a graphical representation of the history
-```
-
----
-
-## Pull/Push
-
-```bash
-git push origin master	# Update changes in remove
-git pull origin master	# Fetch and integrate from another repo or branch
 ```
 ---
 
@@ -231,6 +225,8 @@ git commit -a --amend		# Amend previous commit
 ```
 ---
 ## Working with branches
+
+
 
 ```bash
 git branch						# See branches
@@ -348,6 +344,10 @@ jupyter-repo2docker https://github.com/your_account/your_repo
 1. Create Markdown PITCHME.md
 2. Push to a public repo
 3. http://gitpitch.com/your_account/your_repo
+
+---
+
+## Slides in Jupyter Notebooks
 
 ### [nbpresent](https://github.com/Anaconda-Platform/nbpresent): In Jupyter notebooks
 

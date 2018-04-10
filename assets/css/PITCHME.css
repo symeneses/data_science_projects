@@ -7,6 +7,7 @@
  
  .reveal .slides {
   font-family: 'Abel';
+  text-align: left;
 }
 
 .reveal pre {
@@ -21,6 +22,17 @@
   opacity: 0.95;
   border-radius: 10px;
   font-size: 75% !important;
+}
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 50% !important;
+}
+
+.reveal table th {
+	font-weight: bold;
 }
 
 .reveal .slides section .code-presenting-annotation {
