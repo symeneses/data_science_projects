@@ -168,8 +168,8 @@ Or download [here!](https://git-scm.com/downloads)
 * First steps
 
 ```bash
-git config user.name
-git config user.mail
+git config @user.name
+git config @user.mail
 git config --global --list
 ```
 ---
@@ -177,8 +177,8 @@ git config --global --list
 ## New repos
 
 ```bash
-git init project_name			# Create a new project
-git remote add origin url_git	# Connect repo with remote 
+git init @project_name			# Create a new project
+git remote add origin @url_git	# Connect repo with remote 
 git remote remove origin		# Disconnect repo from remote 
 git remote -v					# Check if repository is connnected
 ```
@@ -189,8 +189,8 @@ git remote -v					# Check if repository is connnected
 ![staging-area](https://git-scm.com/images/about/index1@2x.png)
 
 ```bash
-git add									# Add files to the staging-area (index)
-git commit -m "describe your commit"	# Commit the files added in the staging-area
+git add	@file							# Add files to the staging-area (index)
+git commit -m "@describe_your_commit"	# Commit the files added in the staging-area
 git commit -a							# Commit + add (from working directory to repo)
 ```
 Source: <https://git-scm.com/about/staging-area>
@@ -210,8 +210,8 @@ git pull origin master	# Fetch and integrate from another repo or branch
 ```bash
 git status				# Show changed files and files to be committed
 git log					# See history of changes
-git diff id_commit		# Difference betwenn id_commit and HEAD (last commit)
-git show id_commit		# See details about a commit
+git diff @id_commit		# Difference betwenn id_commit and HEAD (last commit)
+git show @id_commit		# See details about a commit
 git gitk				# Show a graphical representation of the history
 ```
 ---
@@ -219,9 +219,10 @@ git gitk				# Show a graphical representation of the history
 ## Reverting changes
 
 ```bash
-git reset --hard id_commit	# Reset working directory, staging-area from id_commit
-git revert -id_commit		# Reverse to id_commit
-git commit -a --amend		# Amend previous commit
+git rm --cached -r .		# Remove added files recursively from staging-area
+git reset --hard @id_commit	# Reset working directory, staging-area from id_commit
+git revert @id_commit		# Reverse to id_commit, creates a commit opposite to id_commit
+git commit -a --amend		# Amend to previous commit
 ```
 ---
 ## Working with branches
@@ -230,12 +231,12 @@ git commit -a --amend		# Amend previous commit
 
 ```bash
 git branch						# See branches
-git branch branch_name			# Create a new branch
-git checkout -b branch_name		# Create a new branch and switch to it
-git checkout id_commit			# Go to the status of a commit
-git checkout branch_name		# Go to the last commit
+git branch @branch_name			# Create a new branch
+git checkout -b @branch_name    # Create a new branch and switch to it
+git checkout @id_commit			# Go to the status of a commit
+git checkout @branch_name		# Go to the last commit of the given branch
 git branch --merged				# See branches merged with current
-git branch -D branch_name		# Remove branch
+git branch -D @branch_name		# Remove branch
 ```
 ---
 
@@ -249,7 +250,7 @@ git branch -D branch_name		# Remove branch
 - Fork in hosting server then clone
 
 ```bash
-git clone repo_dir			
+git clone @repo_dir			
 # Create a new repo with a clone of repo in repo_dir (url or folder)
 ```
 Work and when you have something valuable request to pull your changes
@@ -258,7 +259,7 @@ Work and when you have something valuable request to pull your changes
 ## Pull request
 
 ```bash
-git request-pull id_commit repo_dir master 
+git request-pull @id_commit @repo_dir master 
 # Request to pull from id_commit in your master to the original repo
 ```
 ---
@@ -267,7 +268,7 @@ git request-pull id_commit repo_dir master
 If you get a pull request (ideally) you should see what it contains
 
 ```bash
-git fetch cloned_repo_dir master		# Fetch changes from the cloned repo
+git fetch @cloned_repo_dir master		# Fetch changes from the cloned repo
 git log -p HEAD..FETCH_HEAD				# Review changes that are in 'FETCH_HEAD'
 ```
 
@@ -278,12 +279,12 @@ git log -p HEAD..FETCH_HEAD				# Review changes that are in 'FETCH_HEAD'
 For forks or branches
 
 ```bash
-git pull cloned_repo_dir			# Pull changes from the cloned repo to the current
+git pull @cloned_repo_dir			# Pull changes from the cloned repo to the current
 ```
 Or for branches
 
 ```bash
-git merge branch_name				# Merge the changes from the given branch into current repo
+git merge @branch_name				# Merge the changes from the given branch into current branch
 ```
 
 ---
@@ -291,8 +292,8 @@ git merge branch_name				# Merge the changes from the given branch into current 
 ## Useful tips
 
 ```bash
-git show :/query			# Show objects that match the query
-git grep -e pattern			# Look for patterns in the current branch
+git show :/@query			# Show objects that match the query
+git grep -e @pattern		# Look for patterns in the current branch
 ```
 ---
 
@@ -323,7 +324,7 @@ pip install -r requirements.txt
 ```bash
 conda create --name env_name python=python_version
 conda activate env_name
-pip install -r requirements.txt
+conda install --yes --file requirements.txt
 ```
 ---
 
