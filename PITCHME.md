@@ -168,8 +168,8 @@ Or download [here!](https://git-scm.com/downloads)
 * First steps
 
 ```bash
-git config @user.name
-git config @user.mail
+git config --global user.name @user.name
+git config --global user.email @user.email
 git config --global --list
 ```
 ---
@@ -375,5 +375,3 @@ Complement of Jupyter to arrange plots and text in a Dashboard layout.
 pip install jupyter_dashboards
 jupyter dashboards quick-setup --sys-prefix
 ```
-
-
